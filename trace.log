@@ -1,0 +1,450 @@
+
+[1;38mVERSION:[0m
+6.2.0-c9d4aaa
+
+
+[1;38mREQUEST:[0m [2014-07-08T14:03:02-04:00]
+POST /oauth/token HTTP/1.1
+Host: uaa.192.168.4.14.xip.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/x-www-form-urlencoded
+User-Agent: go-cli 6.2.0-c9d4aaa / linux
+
+grant_type=refresh_token&refresh_token=eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI3ZGIyMDBjNC1iNTVhLTQxYzgtODI0Zi0zZWY2NDlkNTljNDYiLCJzdWIiOiIzYTY5YjNlZi1jM2Q2LTRjMTktYWM5Yi05OWQyZWVmZTQ5YTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJpYXQiOjE0MDQ4NDI0NTUsImV4cCI6MTQwNjA1MjA1NSwiY2lkIjoiY2YiLCJpc3MiOiJodHRwczovL3VhYS4xOTIuMTY4LjQuMTQueGlwLmlvL29hdXRoL3Rva2VuIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9uYW1lIjoiYWRtaW4iLCJhdWQiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbiIsImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiLCJvcGVuaWQiLCJwYXNzd29yZC53cml0ZSIsInNjaW0ucmVhZCIsInNjaW0ud3JpdGUiXX0.b3Ci11t9hl0SzilI1u3AVG2mshRqaCH_snsMVokBXOmEXAi1-dAKfhVVreavOwrKCbAeJuX1FSQ7BNFyXbJHrtIdKQhNl_kLZwjhoKfSG6Ivziylpy2Ft_qNSJOby9Q6h8qZttXtOpMFcM79RvDq1NSBAG07y9b-ikKgPL9Oe1M&scope=
+
+[1;38mRESPONSE:[0m [2014-07-08T14:03:03-04:00]
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Content-Type: application/json;charset=UTF-8
+Date: Tue, 08 Jul 2014 18:03:03 GMT
+Pragma: no-cache
+Server: Apache-Coyote/1.1
+
+7b0
+{"access_token":"[PRIVATE DATA HIDDEN]","token_type":"bearer","refresh_token":"[PRIVATE DATA HIDDEN]","expires_in":7199,"scope":"scim.read cloud_controller.admin password.write scim.write openid cloud_controller.write cloud_controller.read","jti":"b77fb103-0b07-4d81-84ad-236123945a71"}
+0
+
+
+
+[1;38mREQUEST:[0m [2014-07-08T14:03:03-04:00]
+GET /v2/spaces/e83b4ee8-cccd-433f-a525-2e5503155e49/apps?q=name%3Ahello&inline-relations-depth=1 HTTP/1.1
+Host: api.192.168.4.14.xip.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/json
+User-Agent: go-cli 6.2.0-c9d4aaa / linux
+
+
+
+[1;38mRESPONSE:[0m [2014-07-08T14:03:03-04:00]
+HTTP/1.1 200 OK
+Content-Length: 107
+Content-Type: application/json;charset=utf-8
+Date: Tue, 08 Jul 2014 18:03:03 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 43c0dc63d4ae614fbc521fd6938504d1::220d664a-867d-4f6c-b8c8-12fe6bc2caa4
+
+{
+  "total_results": 0,
+  "total_pages": 0,
+  "prev_url": null,
+  "next_url": null,
+  "resources": [
+
+  ]
+}
+
+[1;38mREQUEST:[0m [2014-07-08T14:03:03-04:00]
+POST /v2/apps?async=true HTTP/1.1
+Host: api.192.168.4.14.xip.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/json
+User-Agent: go-cli 6.2.0-c9d4aaa / linux
+
+{"name":"hello","space_guid":"e83b4ee8-cccd-433f-a525-2e5503155e49","instances":1,"memory":128,"buildpack":"ruby_buildpack","environment_json":{}}
+
+[1;38mRESPONSE:[0m [2014-07-08T14:03:03-04:00]
+HTTP/1.1 201 Created
+Content-Length: 1163
+Content-Type: application/json;charset=utf-8
+Date: Tue, 08 Jul 2014 18:03:03 GMT
+Location: /v2/apps/5c022e88-deaa-400a-9950-1b289b7ec52e
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 8abf7cf7f27f38f35a1ef9fbc7397325::0f01a604-8318-489a-8eae-cd25fed54da3
+
+{
+  "metadata": {
+    "guid": "5c022e88-deaa-400a-9950-1b289b7ec52e",
+    "url": "/v2/apps/5c022e88-deaa-400a-9950-1b289b7ec52e",
+    "created_at": "2014-07-08T18:03:03+00:00",
+    "updated_at": null
+  },
+  "entity": {
+    "name": "hello",
+    "production": false,
+    "space_guid": "e83b4ee8-cccd-433f-a525-2e5503155e49",
+    "stack_guid": "a23ad62a-020b-4c6c-9f82-a6f53f104363",
+    "buildpack": "ruby_buildpack",
+    "detected_buildpack": null,
+    "environment_json": {
+
+    },
+    "memory": 128,
+    "instances": 1,
+    "disk_quota": 1024,
+    "state": "STOPPED",
+    "version": "c6efe036-34fb-4fd9-bad7-8b77de9025f7",
+    "command": null,
+    "console": false,
+    "debug": null,
+    "staging_task_id": null,
+    "package_state": "PENDING",
+    "health_check_timeout": null,
+    "space_url": "/v2/spaces/e83b4ee8-cccd-433f-a525-2e5503155e49",
+    "stack_url": "/v2/stacks/a23ad62a-020b-4c6c-9f82-a6f53f104363",
+    "service_bindings_url": "/v2/apps/5c022e88-deaa-400a-9950-1b289b7ec52e/service_bindings",
+    "routes_url": "/v2/apps/5c022e88-deaa-400a-9950-1b289b7ec52e/routes",
+    "events_url": "/v2/apps/5c022e88-deaa-400a-9950-1b289b7ec52e/events"
+  }
+}
+
+[1;38mREQUEST:[0m [2014-07-08T14:03:03-04:00]
+GET /v2/organizations/4358201b-8d94-4051-8cfb-0b07aa862259/domains HTTP/1.1
+Host: api.192.168.4.14.xip.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/json
+User-Agent: go-cli 6.2.0-c9d4aaa / linux
+
+
+
+[1;38mRESPONSE:[0m [2014-07-08T14:03:03-04:00]
+HTTP/1.1 200 OK
+Content-Length: 435
+Content-Type: application/json;charset=utf-8
+Date: Tue, 08 Jul 2014 18:03:03 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 6db6180526aebc01c409b5fcc6f2d5c6::993f7f14-5401-4ed7-aa38-56db210a9399
+
+{
+  "total_results": 1,
+  "total_pages": 1,
+  "prev_url": null,
+  "next_url": null,
+  "resources": [
+    {
+      "metadata": {
+        "guid": "1a4b4181-fb6c-43ed-bce8-dec3b5bec6e3",
+        "url": "/v2/domains/1a4b4181-fb6c-43ed-bce8-dec3b5bec6e3",
+        "created_at": "2014-07-08T17:39:37+00:00",
+        "updated_at": "2014-07-08T17:39:38+00:00"
+      },
+      "entity": {
+        "name": "192.168.4.14.xip.io"
+      }
+    }
+  ]
+}
+
+[1;38mREQUEST:[0m [2014-07-08T14:03:03-04:00]
+GET /v2/routes?inline-relations-depth=1&q=host%3Ahello%3Bdomain_guid%3A1a4b4181-fb6c-43ed-bce8-dec3b5bec6e3 HTTP/1.1
+Host: api.192.168.4.14.xip.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/json
+User-Agent: go-cli 6.2.0-c9d4aaa / linux
+
+
+
+[1;38mRESPONSE:[0m [2014-07-08T14:03:03-04:00]
+HTTP/1.1 200 OK
+Content-Length: 107
+Content-Type: application/json;charset=utf-8
+Date: Tue, 08 Jul 2014 18:03:03 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: b72d4f4f8288c823531cfb9c3484964e::9dfcced1-6728-444e-a19b-047d9bcaef6e
+
+{
+  "total_results": 0,
+  "total_pages": 0,
+  "prev_url": null,
+  "next_url": null,
+  "resources": [
+
+  ]
+}
+
+[1;38mREQUEST:[0m [2014-07-08T14:03:03-04:00]
+POST /v2/routes?async=true&inline-relations-depth=1 HTTP/1.1
+Host: api.192.168.4.14.xip.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/json
+User-Agent: go-cli 6.2.0-c9d4aaa / linux
+
+{"host":"hello","domain_guid":"1a4b4181-fb6c-43ed-bce8-dec3b5bec6e3","space_guid":"e83b4ee8-cccd-433f-a525-2e5503155e49"}
+
+[1;38mRESPONSE:[0m [2014-07-08T14:03:03-04:00]
+HTTP/1.1 201 Created
+Content-Length: 2153
+Content-Type: application/json;charset=utf-8
+Date: Tue, 08 Jul 2014 18:03:03 GMT
+Location: /v2/routes/27aa173c-0c17-49d1-8bd1-1581b210f70a
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: dddadc13fbe0f36f729a67f7fc06ce69::d9b333c0-835e-4f59-80ae-7cb47e40ad7d
+
+{
+  "metadata": {
+    "guid": "27aa173c-0c17-49d1-8bd1-1581b210f70a",
+    "url": "/v2/routes/27aa173c-0c17-49d1-8bd1-1581b210f70a",
+    "created_at": "2014-07-08T18:03:03+00:00",
+    "updated_at": null
+  },
+  "entity": {
+    "host": "hello",
+    "domain_guid": "1a4b4181-fb6c-43ed-bce8-dec3b5bec6e3",
+    "space_guid": "e83b4ee8-cccd-433f-a525-2e5503155e49",
+    "domain_url": "/v2/domains/1a4b4181-fb6c-43ed-bce8-dec3b5bec6e3",
+    "domain": {
+      "metadata": {
+        "guid": "1a4b4181-fb6c-43ed-bce8-dec3b5bec6e3",
+        "url": "/v2/domains/1a4b4181-fb6c-43ed-bce8-dec3b5bec6e3",
+        "created_at": "2014-07-08T17:39:37+00:00",
+        "updated_at": "2014-07-08T17:39:38+00:00"
+      },
+      "entity": {
+        "name": "192.168.4.14.xip.io"
+      }
+    },
+    "space_url": "/v2/spaces/e83b4ee8-cccd-433f-a525-2e5503155e49",
+    "space": {
+      "metadata": {
+        "guid": "e83b4ee8-cccd-433f-a525-2e5503155e49",
+        "url": "/v2/spaces/e83b4ee8-cccd-433f-a525-2e5503155e49",
+        "created_at": "2014-07-08T18:01:45+00:00",
+        "updated_at": null
+      },
+      "entity": {
+        "name": "dev",
+        "organization_guid": "4358201b-8d94-4051-8cfb-0b07aa862259",
+        "organization_url": "/v2/organizations/4358201b-8d94-4051-8cfb-0b07aa862259",
+        "developers_url": "/v2/spaces/e83b4ee8-cccd-433f-a525-2e5503155e49/developers",
+        "managers_url": "/v2/spaces/e83b4ee8-cccd-433f-a525-2e5503155e49/managers",
+        "auditors_url": "/v2/spaces/e83b4ee8-cccd-433f-a525-2e5503155e49/auditors",
+        "apps_url": "/v2/spaces/e83b4ee8-cccd-433f-a525-2e5503155e49/apps",
+        "routes_url": "/v2/spaces/e83b4ee8-cccd-433f-a525-2e5503155e49/routes",
+        "domains_url": "/v2/spaces/e83b4ee8-cccd-433f-a525-2e5503155e49/domains",
+        "service_instances_url": "/v2/spaces/e83b4ee8-cccd-433f-a525-2e5503155e49/service_instances",
+        "app_events_url": "/v2/spaces/e83b4ee8-cccd-433f-a525-2e5503155e49/app_events",
+        "events_url": "/v2/spaces/e83b4ee8-cccd-433f-a525-2e5503155e49/events"
+      }
+    },
+    "apps_url": "/v2/routes/27aa173c-0c17-49d1-8bd1-1581b210f70a/apps",
+    "apps": [
+
+    ]
+  }
+}
+
+[1;38mREQUEST:[0m [2014-07-08T14:03:03-04:00]
+PUT /v2/apps/5c022e88-deaa-400a-9950-1b289b7ec52e/routes/27aa173c-0c17-49d1-8bd1-1581b210f70a HTTP/1.1
+Host: api.192.168.4.14.xip.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/json
+User-Agent: go-cli 6.2.0-c9d4aaa / linux
+
+
+
+[1;38mRESPONSE:[0m [2014-07-08T14:03:03-04:00]
+HTTP/1.1 201 Created
+Content-Length: 1186
+Content-Type: application/json;charset=utf-8
+Date: Tue, 08 Jul 2014 18:03:03 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: cabbd3bdd254adb50346cb70bf6bd289::e26b57d0-fa70-429d-9c74-daf6984a27b6
+
+{
+  "metadata": {
+    "guid": "5c022e88-deaa-400a-9950-1b289b7ec52e",
+    "url": "/v2/apps/5c022e88-deaa-400a-9950-1b289b7ec52e",
+    "created_at": "2014-07-08T18:03:03+00:00",
+    "updated_at": "2014-07-08T18:03:03+00:00"
+  },
+  "entity": {
+    "name": "hello",
+    "production": false,
+    "space_guid": "e83b4ee8-cccd-433f-a525-2e5503155e49",
+    "stack_guid": "a23ad62a-020b-4c6c-9f82-a6f53f104363",
+    "buildpack": "ruby_buildpack",
+    "detected_buildpack": null,
+    "environment_json": {
+
+    },
+    "memory": 128,
+    "instances": 1,
+    "disk_quota": 1024,
+    "state": "STOPPED",
+    "version": "2fa2d265-fa22-4151-bd17-470fc0148b60",
+    "command": null,
+    "console": false,
+    "debug": null,
+    "staging_task_id": null,
+    "package_state": "PENDING",
+    "health_check_timeout": null,
+    "space_url": "/v2/spaces/e83b4ee8-cccd-433f-a525-2e5503155e49",
+    "stack_url": "/v2/stacks/a23ad62a-020b-4c6c-9f82-a6f53f104363",
+    "service_bindings_url": "/v2/apps/5c022e88-deaa-400a-9950-1b289b7ec52e/service_bindings",
+    "routes_url": "/v2/apps/5c022e88-deaa-400a-9950-1b289b7ec52e/routes",
+    "events_url": "/v2/apps/5c022e88-deaa-400a-9950-1b289b7ec52e/events"
+  }
+}
+
+[1;38mREQUEST:[0m [2014-07-08T14:03:03-04:00]
+PUT /v2/resource_match HTTP/1.1
+Host: api.192.168.4.14.xip.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/json
+User-Agent: go-cli 6.2.0-c9d4aaa / linux
+
+[{"fn":"Gemfile","sha1":"fa6163a21e23522179073b18159ea619471e7a3e","size":41},{"fn":"Gemfile.lock","sha1":"582b9c6ba8c01909cfb983bc4b6c7e6c797b415a","size":101},{"fn":"README.md","sha1":"3408e640bce5bc692506b5017fe42af54ea935f9","size":1059},{"fn":"config.ru","sha1":"f59d49b0cce52f58155687a35623e68aa90488bf","size":91},{"fn":"trace.log","sha1":"f0447f0786688fb1bf69c5f1ef5352c4d1017395","size":11009}]
+
+[1;38mRESPONSE:[0m [2014-07-08T14:03:03-04:00]
+HTTP/1.1 200 OK
+Content-Length: 2
+Content-Type: application/json;charset=utf-8
+Date: Tue, 08 Jul 2014 18:03:03 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 043df091bed0cffd5242f9bbeec384a0::ba674e2c-aafb-4703-b1c1-6917505ac8bd
+
+[]
+
+[1;38mREQUEST:[0m [2014-07-08T14:03:03-04:00]
+PUT /v2/apps/5c022e88-deaa-400a-9950-1b289b7ec52e/bits?async=true HTTP/1.1
+Host: api.192.168.4.14.xip.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: multipart/form-data; boundary=01aac790a052cd8077bcb6239e10b5efa51e97a5833d41507851870fcd6a
+User-Agent: go-cli 6.2.0-c9d4aaa / linux
+
+
+[MULTIPART/FORM-DATA CONTENT HIDDEN]
+
+[1;38mRESPONSE:[0m [2014-07-08T14:03:03-04:00]
+HTTP/1.1 201 Created
+Content-Length: 275
+Content-Type: application/json;charset=utf-8
+Date: Tue, 08 Jul 2014 18:03:03 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: a84e1a295f066328fd318e770744e88c::1e0b04cd-cded-4a17-a1f8-7797bad9bf5f
+
+{
+  "metadata": {
+    "guid": "8086f446-acca-4ab3-bc50-60bc0ee295eb",
+    "created_at": "2014-07-08T18:03:03+00:00",
+    "url": "/v2/jobs/8086f446-acca-4ab3-bc50-60bc0ee295eb"
+  },
+  "entity": {
+    "guid": "8086f446-acca-4ab3-bc50-60bc0ee295eb",
+    "status": "queued"
+  }
+}
+
+[1;38mREQUEST:[0m [2014-07-08T14:03:03-04:00]
+GET /v2/jobs/8086f446-acca-4ab3-bc50-60bc0ee295eb HTTP/1.1
+Host: api.192.168.4.14.xip.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/json
+User-Agent: go-cli 6.2.0-c9d4aaa / linux
+
+
+
+[1;38mRESPONSE:[0m [2014-07-08T14:03:03-04:00]
+HTTP/1.1 200 OK
+Content-Length: 275
+Content-Type: application/json;charset=utf-8
+Date: Tue, 08 Jul 2014 18:03:03 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 0968ca6d1634d11c293f3fd230bc0fd6::ade0f95a-9259-4748-af75-a171d954c0cf
+
+{
+  "metadata": {
+    "guid": "8086f446-acca-4ab3-bc50-60bc0ee295eb",
+    "created_at": "2014-07-08T18:03:03+00:00",
+    "url": "/v2/jobs/8086f446-acca-4ab3-bc50-60bc0ee295eb"
+  },
+  "entity": {
+    "guid": "8086f446-acca-4ab3-bc50-60bc0ee295eb",
+    "status": "queued"
+  }
+}
+
+[1;38mREQUEST:[0m [2014-07-08T14:03:08-04:00]
+GET /v2/jobs/8086f446-acca-4ab3-bc50-60bc0ee295eb HTTP/1.1
+Host: api.192.168.4.14.xip.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/json
+User-Agent: go-cli 6.2.0-c9d4aaa / linux
+
+
+
+[1;38mRESPONSE:[0m [2014-07-08T14:03:08-04:00]
+HTTP/1.1 200 OK
+Content-Length: 172
+Content-Type: application/json;charset=utf-8
+Date: Tue, 08 Jul 2014 18:03:09 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 861ef94e205cb8d6b6c213643df417c3::e8fa1605-d4c7-48c8-bbd2-e1ad85b031a6
+
+{
+  "metadata": {
+    "guid": "0",
+    "created_at": "1970-01-01T00:00:00+00:00",
+    "url": "/v2/jobs/0"
+  },
+  "entity": {
+    "guid": "0",
+    "status": "finished"
+  }
+}
+
+[1;38mREQUEST:[0m [2014-07-08T14:03:09-04:00]
+POST /oauth/token HTTP/1.1
+Host: uaa.192.168.4.14.xip.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/x-www-form-urlencoded
+User-Agent: go-cli 6.2.0-c9d4aaa / linux
+
+grant_type=refresh_token&refresh_token=eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI3ZGIyMDBjNC1iNTVhLTQxYzgtODI0Zi0zZWY2NDlkNTljNDYiLCJzdWIiOiIzYTY5YjNlZi1jM2Q2LTRjMTktYWM5Yi05OWQyZWVmZTQ5YTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJpYXQiOjE0MDQ4NDI0NTUsImV4cCI6MTQwNjA1MjA1NSwiY2lkIjoiY2YiLCJpc3MiOiJodHRwczovL3VhYS4xOTIuMTY4LjQuMTQueGlwLmlvL29hdXRoL3Rva2VuIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9uYW1lIjoiYWRtaW4iLCJhdWQiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbiIsImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiLCJvcGVuaWQiLCJwYXNzd29yZC53cml0ZSIsInNjaW0ucmVhZCIsInNjaW0ud3JpdGUiXX0.b3Ci11t9hl0SzilI1u3AVG2mshRqaCH_snsMVokBXOmEXAi1-dAKfhVVreavOwrKCbAeJuX1FSQ7BNFyXbJHrtIdKQhNl_kLZwjhoKfSG6Ivziylpy2Ft_qNSJOby9Q6h8qZttXtOpMFcM79RvDq1NSBAG07y9b-ikKgPL9Oe1M&scope=
+
+[1;38mRESPONSE:[0m [2014-07-08T14:03:09-04:00]
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Content-Type: application/json;charset=UTF-8
+Date: Tue, 08 Jul 2014 18:03:09 GMT
+Pragma: no-cache
+Server: Apache-Coyote/1.1
+
+7b0
+{"access_token":"[PRIVATE DATA HIDDEN]","token_type":"bearer","refresh_token":"[PRIVATE DATA HIDDEN]","expires_in":7199,"scope":"scim.read cloud_controller.admin password.write scim.write openid cloud_controller.write cloud_controller.read","jti":"8b505bf7-4a3d-4fef-aaf5-f646000cdad6"}
+0
+
+
